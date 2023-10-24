@@ -1,0 +1,19 @@
+.todos {
+  list-style: none;
+  padding-left: 0;
+  .todd {
+    display: flex ;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.status {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  &.done {
+    background-color: green;
+    &+span {text-decoration: line-through;}
+  }
+}

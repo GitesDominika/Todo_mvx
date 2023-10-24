@@ -1,5 +1,6 @@
 
 import {useState} from "react";
+import "./App.scss";
 
 function App() {
 const [value, setValue] = useState('')
@@ -14,11 +15,16 @@ setTodos([...value]);
 setValue('');
     }
 }
+function  handleChangeStatus(todo) {
+
+}
     return (
       <div>
       <h1>todos</h1>
-      <input type="text" value={value} onChange={handleValue} onKeyUp={handleAddTodo}/>
-        <ul>{todos.map((todo, id) => (<li key={id}>{todo}</li>))}</ul>
+                <input type="text" value={value} onChange={handleValue} onKeyUp={handleAddTodo}/>
+        <ul className="todo"> {todos.map((todo, id) => (
+            <li key={id}>
+                <span className="status" onClick={()}> </span><span>{todo}</span></li>))}</ul>
       </div>
   );
 }
